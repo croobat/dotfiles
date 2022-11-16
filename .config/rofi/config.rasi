@@ -1,0 +1,19 @@
+configuration {
+  display-drun: "Applications:";
+  display-window: "Windows:";
+  drun-display-format: "{icon} {name}";
+  font: "JetBrainsMono Nerd Font Medium 10";
+  modi: "window,drun,run,ssh,emoji,clipboard:greenclip print";
+  show-icons: true;
+  terminal: "alacritty";
+  kb-mode-complete: "";
+  kb-accept-entry: "Control+m,Return,KP_Enter,Control+l";
+  kb-remove-to-eol: "";
+  kb-element-next: "Tab,Control+j";
+  kb-element-prev: "ISO_Left_Tab,Control+k";
+}
+
+
+@theme "/themes/dark.rasi"
+
+
