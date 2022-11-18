@@ -1,0 +1,58 @@
+[Default Applications]
+# image
+image/gif=nsxiv.desktop
+image/png=nsxiv.desktop
+image/jpeg=nsxiv.desktop
+image/webp=nsxiv.desktop
+image/svg+xml=nsxiv.desktop
+image/svg=nsxiv.desktop
+image/vnd.microsoft.icon=nsxiv.desktop
+
+# video
+video/mp4=mpv.desktop
+video/m4v=mpv.desktop
+video/x-matroska=mpv.desktop
+video/mov=mpv.desktop
+video/webm=mpv.desktop
+
+# audio
+audio/mpeg=mpv.desktop
+
+# text
+text/plain=nvim.desktop
+inode/x-empty=nvim.desktop
+  # web
+text/html=nvim.desktop
+text/x-php=nvim.desktop
+text/xml=nvim.desktop
+application/json=nvim.desktop
+  # dev
+text/x-shellscript=nvim.desktop
+  # mis
+text/csv=nvim.desktop
+application/x-subrip=nvim.desktop
+
+# doc
+  # pdf
+application/pdf=org.pwmt.zathura.desktop
+  # office
+
+# href
+x-scheme-handler/ftp=firefoxdeveloperedition.desktop
+x-scheme-handler/http=firefoxdeveloperedition.desktop
+x-scheme-handler/https=firefoxdeveloperedition.desktop
+x-scheme-handler/mailto=userapp-Thunderbird-531DS1.desktop
+x-scheme-handler/mid=userapp-Thunderbird-531DS1.desktop
+message/rfc822=userapp-Thunderbird-531DS1.desktop
+
+
+# Misc
+  # torrent
+application/x.bittorrent=org.qbittorrent.qBittorrent.desktop
+x-scheme-handler/magnet=org.qbittorrent.qBittorrent.desktop
+x-scheme-handler/eclipse+command=_usr_lib_dbeaver_.desktop
+
+
+[Added Associations]
+x-scheme-handler/mailto=userapp-Thunderbird-531DS1.desktop
+x-scheme-handler/mid=userapp-Thunderbird-531DS1.desktop
