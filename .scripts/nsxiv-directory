@@ -1,0 +1,21 @@
+#!/bin/bash
+
+dir="$(dirname "$(realpath "$1")")"
+files=("$dir"/*)
+file_id=-1
+
+# Find the index of the given file
+for ((i=0; i<${#files[@]}; i++)); do
+    if [[ "${files[i]}" == "$1" ]]; then
+        file_id=$((i + 1))
+        break
+    fi
+done
+
+# Check if file was found
+if [ "$file_id" -eq -1 ]; then
+    echo "File not found in directory."
+    exit 1
+fi
+
+nsxiv --start-at "$file_id" "${files[@]}"

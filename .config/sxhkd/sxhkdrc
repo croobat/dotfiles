@@ -1,0 +1,200 @@
+### Basic binds ###
+# super + alt       OCUPADOS            LIBRES
+#               abcdfghiklmnopqstvyz    ehjuwx
+
+# super             OCUPADOS                        LIBRES
+#               bcdefghijklmpqrtvwxz.,-= Fk F2 F3   anosy
+
+### Tools ###
+# Rofi{{{
+super + r
+	j4-dmenu-desktop --term=alacritty
+super + shift + r
+	rofi -show drun
+super + shift + c
+	rofi -show calc -modi calc -no-show-match -no-sort
+# Show windows
+alt + Tab
+	rofi -show window
+# Show commands
+super + F2
+	rofi -show run
+# Show ssh
+super + F3
+	rofi -show ssh
+# Clipboard history
+super + c
+	rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
+# Show emojis
+super + slash
+	dmenu-emoji | dmenu -i -l 10 | awk '{print $1}' | tr -d '\n' | xclip -selection clipboard
+	# rofi -show emoji
+# }}}
+
+# Special keys{{{
+# Terminal
+super + Return
+	alacritty
+	# alacritty msg create-window || alacritty
+
+# File manager
+super + shift + Return
+	nemo
+
+# Screenshot
+Print
+	flameshot gui
+
+# Escanear
+super + Print
+	simple-scan
+
+# System monitor
+control + shift + Escape
+	gnome-system-monitor
+
+# Web browser
+# super + e
+# 	firefox
+# super + shift + e
+# 	firefox-developer-edition
+super + f
+	firefox
+super + shift + f
+	firefox-developer-edition
+super + g
+	google-chrome-stable
+super + shift + g
+	google-chrome-unstable
+super + w
+	qutebrowser
+
+# Bookmarks
+super + b
+	/home/tony/.scripts/bmks
+super + shift + b
+	/home/tony/.scripts/bmks gh-repos
+
+# Kill
+super + shift + x
+	xkill
+
+# Volume control
+super + v
+	pavucontrol
+super + control + shift + v
+	alacritty -e pulsemixer
+
+# Rotate screen
+super + shift + s
+	alacritty -e /home/tony/.scripts/rotate-screen
+# }}}
+
+# Media keys{{{
+# Brillo
+XF86MonBrightnessDown
+	/home/tony/.scripts/change-brightness down
+XF86MonBrightnessUp
+	/home/tony/.scripts/change-brightness up
+
+
+# Rotate screen
+XF86Display
+	alacritty -e /home/tony/.scripts/rotate-screen
+
+# Mail
+XF86Tools
+	thunderbird
+
+# Bluetooth
+XF86Bluetooth
+	blueberry
+
+# Rofi beats
+XF86Favorites
+	alacritty --title rofi-beats -e /home/tony/.scripts/rofi-beats
+#}}}
+
+### Apps ###
+## App packs{{{
+# (Art) Asep | Blen | Ink | Kri | Tcty
+super + alt + a ; {a, b, i, k, t}
+	{aseprite, blender, inkscape, krita, tenacity}
+
+# (IDEs) Ard | Cod | Gen | Net | Pyc | VSC
+super + alt + i ; {a, c, g, n, p, v}
+	{arduino, codeblocks, geany, netbeans, pycharm, vscodium}
+
+# (Readers) Cali | Foli | Tach | Oku
+super + alt + r ; {c, f, t, o}
+	{calibre, foliate, tachidesk-server-electron, okular}
+
+# (Misc) Calibre | Cheese
+super + alt + m ; {c,p}
+	{calibre,cheese}
+# }}}
+
+## Apps
+# Virtualbox
+super + alt + b
+	virtualbox
+
+# Cmus
+super + alt + c
+	alacritty --title cmus -e cmus
+
+# Discord
+super + alt + d
+	dbeaver
+
+super + alt + e
+	alacritty
+	# alacritty msg create-window || alacritty
+
+# FreeCAD
+super + alt + f
+	freecad
+
+# Google chat
+super + alt + g
+	/opt/google-chat-linux/google-chat-linux %U
+
+# Slack
+super + alt + k
+	slack
+
+# Libreoffice
+super + alt + l
+	libreoffice
+
+# Simplenote
+super + alt + n
+	alacritty --title sncli -e sncli -c /home/tony/.config/sncli/snclirc
+
+# OBS
+super + alt + o
+	obs-studio
+
+# Image viewer
+super + alt + p
+	qimgv
+
+# Steam
+super + alt + s
+	steam
+
+# Trello
+super + alt + t
+	whale
+
+# VLC
+super + alt + v
+	vlc
+
+# Spotify
+super + alt + y
+	alacritty --title ncspot -e ncspot
+
+# Whatsapp
+super + alt + z
+	whatsapp-nativefier

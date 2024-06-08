@@ -1,0 +1,103 @@
+import = ["/home/tony/.config/alacritty/dracula.toml"]
+
+[colors.primary]
+background = "#1a1b26"
+bright_foreground = "#eaeaea"
+dim_foreground = "#828482"
+foreground = "#fafafa"
+
+[font]
+size = 8
+
+[font.bold]
+family = "JetBrains Mono Nerd Font"
+style = "Semibold"
+
+[font.bold_italic]
+family = "JetBrains Mono Nerd Font"
+style = "Semibold Italic"
+
+[font.italic]
+family = "JetBrains Mono Nerd Font"
+style = "Italic"
+
+[font.normal]
+family = "JetBrains Mono Nerd Font"
+style = "Regular"
+
+[font.offset]
+x = 0
+y = 0
+
+[[hints.enabled]]
+command = "xdg-open"
+post_processing = true
+regex = "(ipfs:|ipns:|magnet:|mailto:|gemini:|gopher:|https:|http:|news:|file:|git:|ssh:|ftp:)[^\u0000-\u001F\u007F-<>\"\\s{-}\\^⟨⟩`]+"
+
+[hints.enabled.binding]
+key = "F"
+mods = "Alt"
+
+[hints.enabled.mouse]
+enabled = true
+mods = "None"
+
+[[keyboard.bindings]]
+action = "Paste"
+key = "V"
+mode = "~Alt"
+mods = "Alt"
+
+[[keyboard.bindings]]
+action = "Copy"
+key = "C"
+mode = "~Alt"
+mods = "Alt"
+
+[[keyboard.bindings]]
+action = "ScrollHalfPageUp"
+key = "K"
+mode = "~Alt"
+mods = "Alt"
+
+[[keyboard.bindings]]
+action = "ScrollHalfPageDown"
+key = "J"
+mode = "~Alt"
+mods = "Alt"
+
+[[keyboard.bindings]]
+action = "SpawnNewInstance"
+key = "N"
+mode = "~Alt"
+mods = "Alt"
+
+[[keyboard.bindings]]
+action = "ToggleViMode"
+key = "Space"
+mode = "~Search"
+mods = "Shift|Control"
+
+[[keyboard.bindings]]
+action = "ScrollToBottom"
+key = "Space"
+mode = "Vi|~Search"
+mods = "Shift|Control"
+
+[[keyboard.bindings]]
+action = "IncreaseFontSize"
+key = "Equals"
+mods = "Command"
+
+[[keyboard.bindings]]
+action = "DecreaseFontSize"
+key = "Minus"
+mods = "Command"
+
+[scrolling]
+history = 2000
+multiplier = 5
+
+[window.dimensions]
+columns = 220
+lines = 55

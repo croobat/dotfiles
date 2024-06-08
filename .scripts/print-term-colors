@@ -1,0 +1,18 @@
+#!/bin/bash
+# print-term-colors: Print all 256 terminal colors
+
+# Define a function to print a line of text with a specified color
+print_color() {
+  printf '%s' "\033[38;5;$1;48;5;$2m $1;$2 \033[0m"
+}
+
+# Print a header for the color table
+echo "Foreground Color;Background Color"
+
+# Loop through all the ANSI color codes
+for fg in {0..255}; do
+  for bg in {0..255}; do
+    print_color "$fg" "$bg"
+  done
+  echo
+done

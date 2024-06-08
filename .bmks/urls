@@ -1,0 +1,61 @@
+netflix          -  paid streaming site                             -  [stream]                -  https://www.netflix.com/mx
+twitch           -  streaming platform                              -  [stream]                -  https://www.twitch.tv
+odysee           -  lbry based video-sharing platform               -  [stream]                -  https://odysee.com
+onepace          -  one piece edited to fix pace                    -  [stream]                -  https://onepace.net/watch
+moviesjoy        -  movies and series piracy site                   -  [stream]                -  https://moviesjoy.to
+crunchy          -  anime streaming site                            -  [stream]                -  https://www.crunchyroll.com
+yt               -  youtube, online video sharing platform          -  [stream]                -  https://www.youtube.com
+yth              -  my youtube history                              -  [stream]                -  https://www.youtube.com/feed/history
+ytl              -  my youtube watch list                           -  [stream]                -  https://www.youtube.com/playlist?list=wl
+movie web        -  open source streaming app                       -  [stream]                -  https://movie-web-me.vercel.app/
+linkedin         -  job searching social network                    -  [social]                -  https://www.linkedin.com
+indeed           -  bolsa de trabajo                                -  [social]                -  https://mx.indeed.com
+lemmy            -  federated discussion platform                   -  [social]                -  https://lemmy.world
+mastodon         -  federated microblogging platform                -  [social]                -  https://mastodon.social
+red              -  online content-sharing communities              -  [social]                -  https://www.reddit.com
+aliexpress       -  online cheap shopping                           -  [store]                 -  https://es.aliexpress.com
+amazon           -  amazon online store                             -  [store]                 -  https://www.amazon.com.mx
+ebay             -  ebay online store                               -  [store]                 -  https://www.ebay.com
+mercadolibre     -  latam product store                             -  [store]                 -  https://www.mercadolibre.com.mx
+jameco           -  cheap electronics                               -  [store]                 -  https://www.jameco.com
+steam unlocked   -  Steam free preinstalled games                   -  [games][pirate]         -  https://steamunlocked.net
+hb humblebundle  -  charity driven content bundles                  -  [games][store]          -  https://www.humblebundle.com
+itch io          -  share and sell indie games                      -  [games][store]          -  https://itch.io
+newgrounds       -  fan-generated content website                   -  [games][store]          -  https://www.newgrounds.com
+epic store       -  epic games store                                -  [games][store]          -  https://www.epicgames.com/store/en-us
+lutris           -  game launcher to simplify linux gaming          -  [games][tools]          -  https://lutris.net
+protondb         -  community-driven compatibility gaming database  -  [games][tools]          -  https://www.protondb.com
+gungeongod       -  enter the gungeon cheatsheet                    -  [games][docs]           -  https://gungeongod.com
+league graphs    -  league of legends statistics                    -  [games][docs]           -  https://www.leagueofgraphs.com
+metasrc          -  league of legends data source                   -  [games][docs]           -  https://www.metasrc.com/aram/na/tierlist
+libgen           -  free access to a vast collection of books       -  [books][pirate]         -  https://libgen.st
+aniwave          -  free anime streaming online                     -  [japan][pirate]         -  https://aniwave.to/home
+yugen            -  modern free anime streaming site                -  [japan][pirate]         -  https://yugen.to
+zoro             -  classic free anime streaming site               -  [japan][pirate]         -  https://zoro.to
+moe              -  anime piracy index                              -  [japan][pirate]         -  https://piracy.moe
+ichimoe          -  japanese translator                             -  [japan][tools]          -  https://ichi.moe
+jisho            -  powerful japanese translator                    -  [japan][tools]          -  https://jisho.org
+huku betu        -  hukumusume independent fairy tales              -  [japan][learn]          -  https://hukumusume.com/douwa/betu/index.html
+huku dowa        -  hukumusume fairy tales                          -  [japan][learn]          -  https://hukumusume.com/douwa/index.html
+huku ennglish    -  hukumusume dowa translations                    -  [japan][learn]          -  https://hukumusume.com/douwa/english/index.html
+hukumusume       -  japanese stories to practice the language       -  [japan][learn]          -  https://hukumusume.com
+japanesegrammar  -  learn basic japanese grammar                    -  [japan][learn]          -  https://guidetojapanese.org/learn
+japanesemoe      -  learn how to learn japanese                     -  [japan][learn]          -  https://learnjapanese.moe
+nhk              -  japan news for language beginners               -  [japan][learn]          -  https://www3.nhk.or.jp/news/easy
+taekim           -  tae kim's japanese guide                        -  [japan][learn]          -  https://guidetojapanese.org/learn
+wanikani         -  japanese writing practice online platform       -  [japan][learn]          -  https://www.wanikani.com
+tumangaonline    -  free manga reader in spanish                    -  [japan][books][pirate]  -  https://visortmo.com/
+chat gpt         -  artificial inteligence chatbot                  -  [tools]                 -  https://chat.openai.com
+cups             -  printer manager                                 -  [tools]                 -  https://localhost:631
+google drive     -  google's cloud storage service                  -  [tools]                 -  https://drive.google.com/drive/u/0/my-drive
+ilovepdf         -  cool pdf tools                                  -  [tools]                 -  https://www.ilovepdf.com
+missive          -  team email platform                             -  [tools]                 -  https://mail.missiveapp.com
+onedrive         -  microsoft's cloud storage service               -  [tools]                 -  https://onedrive.live.com/about/en-us/signin
+trad             -  google translator                               -  [tools]                 -  https://translate.google.com/?hl=es
+wiby             -  search engine for non-js sites                  -  [tools]                 -  https://wiby.me
+homeworkify      -  cool chegg/etc bypass                           -  [tools][pirate]         -  https://homeworkify.eu/
+pirate           -  piracy torrent indexing site                    -  [tools][pirate]         -  https://www.pirateproxy-bay.com
+sfoo             -  train shortcuts in multiple tools               -  [tools][learn]          -  https://www.shortcutfoo.com
+udemy            -  cheap courses for everything                    -  [tools][learn]          -  https://www.udemy.com
+pexels           -  free stock photos                               -  [tools][repos]          -  https://www.pexels.com/
+thingiverse      -  free 3d print models                            -  [tools][repos]          -  https://www.thingiverse.com

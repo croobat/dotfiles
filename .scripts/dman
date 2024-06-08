@@ -1,0 +1,4 @@
+#!/bin/bash
+# dman: list man pages with dmenu
+
+man "$(apropos --long . | dmenu -i -l 10 -z 1024 | awk '{print $2, $1}' | tr -d '()')"

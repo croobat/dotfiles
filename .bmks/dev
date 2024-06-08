@@ -1,0 +1,61 @@
+3000                       -  localhost port 3000                                   -  [web][tools]     -  http://localhost:3000
+3001                       -  localhost port 3001                                   -  [web][tools]     -  http://localhost:3001
+5173                       -  localhost port 5173                                   -  [web][tools]     -  http://localhost:5173
+80                         -  localhost port 80                                     -  [web][tools]     -  http://localhost:80
+8080                       -  localhost port 8080                                   -  [web][tools]     -  http://localhost:8080
+fso fullstack open         -  Free and thorough modern web development course       -  [web][learn]     -  https://fullstackopen.com/en/#course-contents
+fsos fullstack open, subs  -  full stack open submissions                           -  [web][learn]     -  https://studies.cs.helsinki.fi/stats/
+mentor                     -  frontend development training exercises               -  [web][learn]     -  https://www.frontendmentor.io
+codecamp                   -  code learning platform                                -  [web][learn]     -  https://www.freecodecamp.org
+learnx                     -  condensed overview of programming languages           -  [web][learn]     -  https://learnxinyminutes.com
+odin project               -  foss web development beginner course                  -  [web][learn]     -  https://www.theodinproject.com
+angular                    -  angularjs framework documentation                     -  [js][docs]       -  https://angular.io/docs
+js documentation           -  javascript documentation                              -  [js][docs]       -  https://developer.mozilla.org/en-us/docs/web/javascript
+reactjs                    -  Web framework based in components                     -  [js][docs]       -  https://react.dev
+hugo                       -  fast framework for building static sites              -  [js][docs]       -  https://gohugo.io
+jsconsole                  -  javascript online console                             -  [js][tools]      -  https://jsconsole.com
+webpack-generator          -  frontend build config generator                       -  [js][tools]      -  https://createapp.dev
+javascript info            -  extensible javascript guide                           -  [js][learn]      -  https://javascript.info/
+you dont know js           -  book about javascript                                 -  [js][books]      -  https://github.com/getify/You-Dont-Know-JS
+eloquent javascript        -  book about javascript                                 -  [js][books]      -  https://eloquentjavascript.net/
+npm                        -  node package manager                                  -  [js][repos]      -  https://www.npmjs.com
+html reference             -  html documentation                                    -  [html][docs]     -  https://htmlreference.io
+css reference              -  css visual guide                                      -  [css][docs]      -  https://cssreference.io
+tailwind                   -  css modular framework                                 -  [css][docs]      -  https://tailwindcss.com/docs/customizing-colors
+autoprefixer               -  postcss plugin that adds vendor prefixes              -  [css][tools]     -  https://autoprefixer.github.io
+specificity                -  check css specificity                                 -  [css][tools]     -  https://specificity.keegan.st
+polaris                    -  shopify's style guidelines for web design             -  [design][docs]   -  https://polaris.shopify.com/design
+nerdfonts                  -  nerd fonts icon cheatsheet                            -  [design][docs]   -  https://www.nerdfonts.com/cheat-sheet
+ui-patterns                -  collection of user interface design patterns          -  [design][docs]   -  https://ui-patterns.com
+codepen                    -  dev environment to share frontend code snippets       -  [design][tools]  -  https://codepen.io
+figma                      -  collaborative design tool                             -  [design][tools]  -  https://www.figma.com
+real time colors           -  see colorschemes in real time through a website       -  [design][tools]  -  https://www.realtimecolors.com
+penpot                     -  collaborative foss design tool                        -  [design][tools]  -  https://penpot.app
+hackdesign                 -  web design free course, mail driven                   -  [design][learn]  -  https://hackdesign.org/lessons
+r/web_design faqs          -  cool web design sites from r/web_design               -  [design][learn]  -  https://reddit.com/r/web_design/wiki/faq
+noun project               -  a vast collection of icons, images and symbols        -  [design][repos]  -  https://thenounproject.com
+fly io                     -  cloud computing platform (with a sensible free tier)  -  [deploy]         -  https://fly.io/
+netlify                    -  easy deploy for static pages                          -  [deploy]         -  https://www.netlify.com
+railway                    -  simplified deployment and webapp development          -  [deploy]         -  https://railway.app
+render                     -  free cloud application hosting for devs               -  [deploy]         -  https://render.com
+vercel                     -  cloud platform specialized in static sites            -  [deploy]         -  https://vercel.com/dashboard
+arch wiki                  -  archlinux wiki page                                   -  [linux][docs]    -  https://wiki.archlinux.org
+arch rosetta               -  archlinux pacman useful cheatsheet                    -  [linux][docs]    -  https://wiki.archlinux.org/title/Pacman/Rosetta
+awesomewm                  -  awesome window manager                                -  [linux][docs]    -  https://awesomewm.org/doc/api
+linux die                  -  linux documentation                                   -  [linux][docs]    -  https://linux.die.net
+dwm                        -  dynamic window manager                                -  [linux][docs]    -  https://dwm.suckless.org
+aur                        -  archlinux user repository                             -  [linux][repos]   -  https://aur.archlinux.org
+format sql                 -  sql formatting tool                                   -  [sql][tools]     -  https://codebeautify.org/sqlformatter
+crates                     -  rust package manager                                  -  [rust][repos]    -  https://crates.io
+shellcheck                 -  shellcheck lsp documentation                          -  [low][tools]     -  https://www.shellcheck.net/wiki
+learnshell                 -  interactive shell programming tutorial                -  [low][learn]     -  https://learnshell.org
+php                        -  php documentation                                     -  [php][docs]      -  https://www.php.net/docs.php
+gh public apis             -  curated list of free apis                             -  [git][repos]     -  https://github.com/public-apis/public-apis
+cheatsheet                 -  awesome cheatsheets for software tools                -  [git][repos]     -  https://github.com/detailyang/awesome-cheatsheet
+chatgpt                    -  chat with an ai                                       -  [tools]          -  https://chat.openai.com
+favicon                    -  favicon checker and generator                         -  [tools]          -  https://realfavicongenerator.net
+tinypng                    -  reduce and compress image size                        -  [tools]          -  https://tinypng.com
+gh github                  -  git version control hosting service                   -  [tools]          -  https://github.com
+ghp github pages           -  static website from github repository                 -  [tools]          -  https://pages.github.com
+ghr github repos           -  my personal github repositories                       -  [tools]          -  https://github.com/croobat?tab=repositories
+gitlab                     -  the devsecops platform                                -  [tools]          -  https://www.gitlab.com

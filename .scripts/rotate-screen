@@ -1,0 +1,17 @@
+#!/bin/bash
+# rotate-screen: toggle screen rotation betwwen horizontal and vertical
+
+TOUCHPAD="SYNA8004:00 06CB:CD8B Touchpad"
+MONITOR_NAME="eDP1"
+MON_ORIENTATION="$(xrandr --query --verbose | grep "$MONITOR_NAME" | cut -d ' ' -f 6)"
+TRANSFORM="Coordinate Transformation Matrix"
+
+if [[ "$MON_ORIENTATION" == "normal"  ]]; then
+	xrandr --output "$MONITOR_NAME" --rotate right
+	# Rotar touchpad
+	[ ! -z "$TOUCHPAD" ]    && xinput set-prop "$TOUCHPAD"    "$TRANSFORM" 0 1 0 -1 0 1 0 0 1
+else
+	xrandr --output "$MONITOR_NAME" --rotate normal
+	# Regresar touchpad a orientacion normal
+	[ ! -z "$TOUCHPAD" ]    && xinput set-prop "$TOUCHPAD"    "$TRANSFORM" 1 0 0 0 1 0 0 0 1
+fi

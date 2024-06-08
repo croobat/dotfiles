@@ -1,0 +1,65 @@
+#!/bin/bash
+
+# Keyboard altgr-intl swap caps esc
+setxkbmap -layout us -variant altgr-intl -option caps:swapescape
+
+# Fast Keyboard
+xset r rate 250 40
+# Longer time before screen turn-off
+xset s 1800
+
+# DPI
+[[ -f ~/.Xresources ]] && xrdb -merge -I "$HOME" ~/.Xresources
+
+# Touchpad sensitivity
+xinput set-prop 'TPPS/2 Elan TrackPoint' 'libinput Accel Speed' 0
+
+# Export tools
+export EDITOR=nvim
+export BROWSER=firefox
+export LESS='-R -j8 -x4'
+export MANPAGER='less'
+export GOPATH=/home/tony/.go
+
+# Export colors
+export EXA_COLORS="ur=3;33;40m:uw=3;33;40m:ux=3;33;40m:ue=3;33;40m:gr=3;34;40m:gw=3;34;40m:gx=3;34;40m:tr=3;36;40m:tw=3;36;40m:tx=3;36;40m"
+export LF_COLORS="*.epub=01;35:*.mobi=01;34:*.lua=01;36:*.json=01;32"
+# export LESS_TERMCAP_mb=$'\e[1;34m'
+# export LESS_TERMCAP_md=$'\e[1;3;34m'
+# export LESS_TERMCAP_us=$'\e[3;4;32m'
+# export LESS_TERMCAP_me=$'\e[0m'
+# export LESS_TERMCAP_se=$'\e[0m'
+# export LESS_TERMCAP_ue=$'\e[0m'
+
+# Android-studio
+export _JAVA_AWT_WM_NONREPARENTING=1
+
+# Source Xresources
+xrdb -merge ~/.Xresources
+
+# Startup apps
+picom &
+flameshot &
+greenclip daemon &
+udiskie &
+nitrogen --restore &
+dunst &
+numlockx &
+unclutter --timeout 10 &
+lxsession &
+cbatticon -l 10 -r 5 --hide-notification &
+sxhkd -t 4 &
+playerctld daemon &
+volumeicon &
+
+thunderbird &
+
+while true; do
+	while true; do
+		xsetroot -name "$( date +"%F %R" )"
+		sleep 1m
+	done &
+	dwm >/dev/null 2>&1
+done
+
+# exec awesome

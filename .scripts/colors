@@ -1,0 +1,14 @@
+#!/bin/sh
+# colors: test bash tool to select dmenu choices
+
+choices="blue\nred\nyellow\nblack"
+chosen=$(printf '%s' "$choices" | dmenu -i)
+
+case "$chosen" in
+    blue) echo 'you picked blue!'
+    ;;
+    red) echo 'red love'
+    ;;
+    *) echo 'we are yellow or black or whatever else'
+    ;;
+esac

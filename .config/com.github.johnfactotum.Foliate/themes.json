@@ -1,0 +1,20 @@
+{
+  "themes": [
+    {
+      "theme-name": "Inverted Nord",
+      "fg-color": "#d8dee9",
+      "bg-color": "rgb(28,35,49)",
+      "link-color": "#88c0d0",
+      "invert": true,
+      "dark-mode": true
+    },
+    {
+      "theme-name": "Inverted Gruvbox",
+      "fg-color": "#ebdbb2",
+      "bg-color": "#282828",
+      "link-color": "#83a598",
+      "invert": true,
+      "dark-mode": true
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+[init]
+	defaultBranch = main
+[user]
+	email = tonyramirez.business@outlook.com
+	name = Tony Ramírez
+[credential "https://github.com"]
+	helper =
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper =
+	helper = !/usr/bin/gh auth git-credential
+
+; Delta
+[core]
+	pager = delta
+	whitespace = tab-in-indent,trailing-space,space-before-tab
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	navigate = true
+	light = false
+	wrap-max-lines = 0
+	width = 79
+	keep-plus-minus-markers = true
+	minus-empty-line-marker-style = '"#ffffff"'
+	minus-style = '"#ff5d4d"'
+	minus-emph-style = '"#fdfd96" "#7c0f0f"'
+	plus-style = '"#50fa7b"'
+	plus-emph-style = '"#fdfd96" "#236823"'
+	tabs = 4
+[merge]
+	conflictstyle = diff3
+[diff]
+	colorMoved = default
+
+; /Delta
+
+; [difftool]
+; 	prompt = true
+; [diff]
+; 	tool = nvimdiff
+; [difftool "nvimdiff"]
+; 	cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
+; 	prompt = true
+; [alias]
+
+[safe]
+	directory = /opt/flutter
+[color]
+	ui = auto
+[pull]
+	rebase = true

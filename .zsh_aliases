@@ -1,0 +1,279 @@
+# ls
+alias ls='exa --group-directories-first'
+alias gls='ls --git-ignore'
+alias lr='ls -R'
+alias ll='ls -l'
+alias la='ll -a'
+alias l='la'
+alias lx='ll --sort=extension'
+alias lz='ll --sort=size'
+alias lt='ll --sort=date'
+
+alias bat='bat --theme=base16 --pager="less -FRX -I"'
+
+# Permissions
+alias chown='chown --preserve-root'
+alias chmod='chmod --preserve-root'
+alias chgrp='chgrp --preserve-root'
+alias chx='chmod --preserve-root u+x'
+
+# Privileged access
+alias poweroff='sudo systemctl poweroff'
+alias netctl='sudo netctl'
+alias nethogs='sudo nethogs'
+alias updatedb='sudo updatedb --verbose'
+
+# Pacman
+alias update='sudo pacman -Syu'
+alias pacinn="sudo pacman -S --needed"
+alias yainn="yay -S --needed"
+alias yainch="yay -S --mflags \"--skipchecksums --skippgpcheck\""
+
+# Git
+alias glgm='git log --stat'
+alias glogm='git log --oneline --decorate --graph'
+alias gslogm="git log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
+alias glg='git log --stat --no-merges'
+alias glog='git log --oneline --decorate --graph --no-merges'
+alias gslog="git log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all --no-merges"
+alias gd="git diff"
+alias gdc="git diff --cached"
+alias gdd="git difftool"
+alias git-remove-all-branches='git branch | grep -v "master\|production\|main\|develop\|aramirez\|TonyBranch" | xargs git branch -D'
+alias gctony='git config user.email "tonyramirez.business@outlook.com" && git config user.name "croobat"'
+alias gcsaeko='git config user.email "tony@saeko.io" && git config user.name "Tony Ramírez"'
+alias gcbroxia='git config user.email "antonio.ramirez@broxia-int.com" && git config user.name "Tony Ramírez"'
+alias gstall='git stash --all --no-include-untracked'
+alias ginit='git init && git add . && git commit -m "first"'
+
+## Modified
+alias diff='colordiff'
+alias grep='grep --color=auto'
+alias more='less'
+alias locate='plocate'
+alias df='df -h'
+alias du='du -c -h'
+alias mkdir='mkdir -p -v'
+alias md='mkdir -p -v'
+alias nano='nano -w'
+alias ping='ping -c 3'
+alias dmesg='dmesg -HL'
+alias less="bat -f --paging=always"
+alias nsxiv="nsxiv -a -r -s f"
+alias vim="nvim"
+alias v="nvim"
+alias vi="nvim --noplugin"
+alias ssh="TERM=xterm-256color ssh"
+alias speedtest="speedtest-cli --secure"
+alias grep="grep -i"
+alias rclone="rclone -P"
+alias cbonsai="cbonsai -li -t 0.01 -w 4 -M 5 -L 50"
+alias easytag="GTK_THEME=Adwaita:light easytag"
+alias lf="lfrun"
+alias mermaid="mmdc --theme forest"
+alias gs="echo 'te confundiste carnal'"
+alias sudoedit="doas vim"
+
+#Abbreviated
+alias cpr="cp -r"
+alias t="trash"
+alias firefoxserver="live-server --browser=firefox-developer-edition"
+alias chromeserver="live-server --browser=google-chrome-unstable"
+alias quteserver="live-server --browser=qutebrowser"
+alias du1='du --max-depth=1'
+alias du2='du --max-depth=2'
+alias du3='du --max-depth=3'
+alias o="xdg-open"
+alias getdefault="xdg-mime query default"
+alias setdefault="xdg-mime default"
+alias gettype="xdg-mime query filetype"
+alias td="topydo"
+alias todo="topydo add"
+alias todid="topydo do"
+alias todos="topydo ls"
+alias spt="ncspot"
+alias sn='sncli -c $HOME/.config/sncli/snclirc'
+alias bm="bashmount"
+alias scim="sc-im"
+alias 2048="2048 bluered"
+alias nvmsource='source /usr/share/nvm/init-nvm.sh'
+alias zsource='source $HOME/.zshrc'
+alias dm="dmenu_run"
+alias ra="ranger"
+alias maria="mariadb"
+alias rust="rustc"
+alias firefox="firefox-developer-edition"
+alias fox="firefox-developer-edition"
+alias dcp="docker cp"
+alias xclipp="xclip -selection clipboard"
+alias wmjava="wmname LG3D"
+alias pdf='zathura'
+alias npmi='npm install'
+alias npmI='npm info'
+alias pn='pnpm'
+alias pni='pnpm install'
+alias pna='pnpm add'
+alias pnag='pnpm add -g'
+alias pnx='pnpm dlx'
+alias pnex='pnpm exec'
+alias pnS='pnpm add --save-prod'
+alias pnD='pnpm add --save-dev'
+alias pnF='pnpm add --force'
+alias pnG='pnpm add --global'
+alias pnrm='pnpm uninstall'
+alias pnE='PATH="$(pnpm bin)":"$PATH"'
+alias pnR='pnpm run'
+alias pnr='pnpm run'
+alias pnrd='pnpm run dev'
+alias pnrt='pnpm run test'
+alias pnrsv='pnpm run serve'
+alias pnrb='pnpm run build'
+alias pnO='pnpm outdated'
+alias pnU='pnpm update'
+alias pnV='pnpm version'
+alias pnL='pnpm list'
+alias pnls='pnpm list'
+alias pnL0='pnpm ls --depth=0'
+alias pnst='pnpm start'
+alias pnt='pnpm test'
+alias pnP='pnpm publish'
+alias pnI='pnpm init'
+alias pnin='pnpm info'
+alias pnSe='pnpm search'
+
+#New
+alias openports='ss --all --numeric --processes --ipv4 --ipv6'
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias youtube-dl-playlist-guardar="yt-dlp -x -f bestaudio --external-downloader aria2c --external-downloader-args '-c -j 3 -x 3 -s 3 -k 1M' --ignore-errors --continue --audio-format mp3 'https://www.youtube.com/playlist?list=PLx5AzHfyfSFtPdMQc2pI0JisEDvOtAp3i'"
+alias youtube-dl-playlist="yt-dlp -x -f bestaudio --external-downloader aria2c --external-downloader-args '-c -j 3 -x 3 -s 3 -k 1M' --ignore-errors --continue --no-overwrites --audio-format mp3"
+alias android-mount='aft-mtp-mount ~/.mnt'
+alias android-umount='fusermount -uz ~/.mnt'
+alias fix-android-bar='adb shell settings put global force_fsg_nav_bar 1'
+alias git-confirm-install='curl -sSfL https://cdn.rawgit.com/pimterry/git-confirm/v0.2.2/hook.sh > .git/hooks/pre-commit && chmod +x .git/hooks/pre-commit'
+alias git-confirm-add='git config --add hooks.confirm.match'
+alias eval-s='eval "$(ssh-agent -s)" && ssh-add ~/.ssh/id_ed25519_saeko'
+alias eval-b='eval "$(ssh-agent -s)" && ssh-add ~/.ssh/id_ed25519_broxia'
+alias config='/usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
+
+#Multi
+alias shutgrade="upgrade --combinedupgrade && shutdown now"
+alias bootgrade="upgrade --combinedupgrade && reboot"
+alias zzz="betterlockscreen --lock dim"
+
+#Vim file
+#common
+alias vw="vim ~/Documents/vimwiki/index.md"
+alias readme="vim README.md"
+alias license="vim LICENSE"
+alias pson="vim package.json"
+
+#conf
+alias paconf="vim /etc/pacman.conf"
+alias apacheconf="vim /etc/httpd/conf/httpd.conf"
+alias phpconf="vim /etc/php/php.ini"
+alias php7conf="vim /etc/php74/php.ini"
+alias php5conf="vim /etc/php56/php.ini"
+alias phpmyadminconf="vim /usr/share/webapps/phpMyAdmin/config.inc.php"
+
+alias zconf="vim ~/.zshrc"
+alias zalias="vim ~/.zsh_aliases"
+alias piconf="vim ~/.config/picom/picom.conf"
+alias alaconf="vim ~/.config/alacritty/alacritty.toml"
+alias bindsconf="vim ~/.config/sxhkd/sxhkdrc"
+alias qutemarks="vim ~/.config/qutebrowser/quickmarks"
+alias qutequick="vim ~/.config/qutebrowser/quickmarks"
+alias xinit="vim ~/.xinitrc"
+alias viminit="vim ~/.config/nvim/init.lua"
+alias vimplug="vim ~/.config/nvim/lua/plugins/init.lua"
+alias lfconf="vim ~/.config/lf/lfrc"
+alias mimeconf="vim ~/.config/mimeapps.list"
+alias profile="vim ~/.xprofile"
+
+# cd
+alias ..='cd ..'
+alias setcurrent="/home/tony/.scripts/set-current"
+alias current="cd /home/tony/Development/web-dev/react/fullstackopen"
+
+alias down="cd ~/Downloads"
+alias docs="cd ~/Documents"
+alias dev="cd ~/Development"
+alias mobile="cd ~/Development/mobile-dev"
+alias pics="cd ~/Pictures"
+alias music="cd ~/Music"
+alias videos="cd ~/Videos"
+alias movies="cd ~/Videos/Movies"
+alias scripts="cd ~/.scripts"
+alias books="cd ~/Documents/books"
+alias media="cd /media"
+alias mnt="cd ~/.mnt"
+alias japanese="cd ~/Documents/courses/japanese"
+
+alias desk="cd /usr/share/applications"
+alias wdev="cd ~/Development/web-dev"
+alias gdev="cd ~/Development/game-dev"
+alias ldev="cd ~/Development/low-dev"
+alias mdev="cd ~/Development/mobile-dev"
+alias cvlatex="cd ~/Development/latex/resume"
+alias tachi="cd ~/.local/share/Tachidesk/downloads"
+
+# Workspace
+if [[ "$DISPLAY" == ":0" ]]; then
+  alias work='cd ~/Development/work/saeko'
+elif [[ "$DISPLAY" == ":1" ]]; then
+  alias work='cd ~/Development/work/broxia'
+else
+  alias work='cd ~/Development/web-dev'
+fi
+alias wwork='cd ~/Development/work/broxia'
+alias wrok='echo "te confundiste carnal"'
+
+#cd conf dir
+alias conf="cd ~/.config"
+alias dwconf="cd ~/.config/dwm"
+alias dmconf="cd ~/.config/dmenu"
+alias vimconf="cd ~/.config/nvim"
+alias quteconf="cd ~/.config/qutebrowser"
+alias rangerconf="cd ~/.config/ranger"
+alias nsxivconf="cd ~/.config/nsxiv"
+alias awconf="cd ~/.config/awesome"
+
+## Media
+#audio
+alias playwav='mpv *.wav'
+alias playogg='mpv *.ogg'
+alias playmp3='mpv *.mp3'
+
+# Video
+alias playavi='mpv *.avi'
+alias playmov='mpv *.mov'
+alias playmp4='mpv *.mp4'
+alias playflv='mpv *.flv'
+alias playmkv='mpv *.mkv'
+
+## Error tolerant
+alias :q=' exit'
+alias :Q=' exit'
+alias :x=' exit'
+alias cd..='cd ..'
+
+# Grep pipe
+alias findprocess='ps -Af | grep'
+
+# Paru
+alias parclean='paru -Sc'
+alias parclr='paru -Scc'
+alias parupg='paru -Sua'
+alias parin='paru -S'
+alias parinn='paru -S --needed'
+alias parre='paru -R'
+alias parrem='paru -Rns'
+alias parrep='paru -Si'
+alias parreps='paru -Ss'
+alias parloc='paru -Qi'
+alias parlocs='paru -Qs'
+alias parlst='paru -Qe'
+alias parorph='paru -Qtd'
+alias parinsd='paru -S --asdeps'
+alias parmir='paru -Syy'
+alias parupd="paru -Sy"
+alias upgrade='paru -Syu --combinedupgrade'

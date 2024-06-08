@@ -1,0 +1,4 @@
+#!/bin/zsh
+# set-current: change current project to $PWD in zsh config
+
+sed -i '/alias current/s?/.*?'`pwd`'"?' ~/.zshrc

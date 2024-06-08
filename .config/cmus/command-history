@@ -1,0 +1,20 @@
+set start_view=playlist
+set start_view=sorted
+set tree_width_percent=10
+set tree_width_percent=20
+mark f
+pl-create favorites
+help
+?
+bind -f common 1 view tree
+bind -f common 2 view sorted
+bind -f common 1 view sorted
+bind -f common 2 view tree
+bind -f common 1 view tree2
+shell !                                                                                                      04:34
+colorscheme theme
+sdfdsf
+dsf
+w
+save
+s

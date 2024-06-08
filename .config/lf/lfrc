@@ -1,0 +1,268 @@
+#  ╭─────────╮
+#  │ Setup   │
+#  ╰─────────╯
+set icons
+
+# set previewer ctpv
+# set cleaner ctpvclear
+# &ctpv -s $id
+# &ctpvquit $id
+
+set previewer ~/.config/lf/preview
+set cleaner ~/.config/lf/cleaner
+
+#  ╭─────────╮
+#  │ Options │
+#  ╰─────────╯
+# Interpreter
+set shell zsh
+
+# Shell options
+#   -e: Exit an error
+#   -u: Give error for unset var
+#   -f: Disable pathname expansion
+set shellopts '-euy'
+
+# Internal file separator for shell commands
+set ifs "\n"
+set filesep "\n"
+
+# Spacing at top and bottom of screen
+set scrolloff 10
+
+# Boxes around files
+set drawbox
+
+# Mouse events
+set mouse
+
+# Start without preview
+set preview!
+
+# Column ratios
+# set ratios '1:3:5'
+set ratios '2:10'
+
+#  ╭─────────╮
+#  │ Visuals │
+#  ╰─────────╯
+#  ╭──────────╮
+#  │ Mappings │
+#  ╰──────────╯
+# Unmappings
+map d
+map y
+map p
+
+# Pager
+map i $bat -f --paging=always --theme=base16 "$f"
+
+# Basic Functions
+map . set hidden!
+map R reload
+map mf mf
+map md md
+map C clear
+
+map dd cut
+map dD trash
+map DD delete
+map yy copy
+map pp paste
+map po paste-override
+
+# Movement
+map gd cd ~/Documents
+map gc cd ~/.config
+map gv cd ~/Development
+map gw cd ~/Development/web-dev
+map gW cd ~/Development/work
+map gD cd ~/Downloads
+map gp cd ~/Pictures
+map gC cd ~/.config
+map gv cd ~/Videos
+map gs cd ~/.scripts
+map gm cd ~/Videos/Movies
+map gM cd ~/Music
+map gu cd /media/
+map gU cd ~/.mnt
+map gb cd ~/Documents/books
+
+# Faster scrolling
+map <c-j> push 5j
+map <c-k> push 5k
+
+# execute current file (must be executable)
+map x $$f
+map X !$f
+
+# File openers
+map o open
+map l open
+map l open
+map L &xdg-open $f
+map <enter> open
+map R push :open-with<space>
+
+# custom open command (only when !directory)
+cmd open ${{
+    test -L $f && f=$(readlink -f $f)
+    # case $(file --mime-type $f -b) in
+    #     # text/*) $EDITOR $fx;;
+    #     *) for f in $fx; do setsid $OPENER $f > /dev/null 2> /dev/null & done;;
+    # esac
+    if [ $(file --mime-type $f -b) != 'inode/directory' ]; then
+      xdg-open $f
+    else
+      open $f
+    fi
+}}
+
+# Map rename
+map <f-2> push :rename<space>
+map r push :rename<space>
+
+# Hide previews
+map , yes_preview
+
+# New folder with selected items
+map <a-n> newfold
+
+# Edit the current filename
+map A ${{
+    # get 'basename' of the selection
+    filename="${f##*/}"
+    # quote it so we won't deal with quotes in the lf -remote command
+    filename="$(printf '%q' "$filename")"
+    filename="${filename// /<space>}"
+    lf -remote "send $id push :rename<space>$filename"
+}}
+
+# Edit filename before the extension
+map a ${{
+    # get 'basename' of the selection
+    filename="${f##*/}"
+    # quote it so we won't deal with quotes in the lf -remote command
+    filename="$(printf '%q' "$filename")"
+    filename="${filename// /<space>}"
+    lf -remote "send $id push :rename<space>$filename<a-b><c-b>"
+}}
+
+# Edit filename from start
+map I ${{
+    # get 'basename' of the selection
+    filename="${f##*/}"
+    # quote it so we won't deal with quotes in the lf -remote command
+    filename="$(printf '%q' "$filename")"
+    filename="${filename// /<space>}"
+    lf -remote "send $id push :rename<space>$filename<c-a><a-f><c-f>"
+}}
+
+#  ╭─────────────────╮
+#  │ Custom commands │
+#  ╰─────────────────╯
+
+# Trash commands
+cmd trash %set -rf; trash $fx
+cmd t %set -rf; trash $fx
+
+# Extract commands
+cmd extract ${{
+    set -f
+    case $f in
+        *.tar.bz|*.tar.bz2|*.tbz|*.tbz2) tar xjvf $f;;
+        *.tar.gz|*.tgz) tar xzvf $f;;
+        *.tar.xz|*.txz) tar xJvf $f;;
+        *.zip) unzip $f;;
+        *.rar) unrar x $f;;
+        *.7z) 7z x $f;;
+    esac
+}}
+# Compress commands
+cmd tar ${{
+    set -f
+    mkdir $1
+    cp -r $fx $1
+    tar czf $1.tar.gz $1
+    rm -rf $1
+}}
+cmd zip ${{
+    set -f
+    mkdir $1
+    cp -r $fx $1
+    zip -r $1.zip $1
+    rm -rf $1
+}}
+
+cmd rename %[ -e $1 ] && printf "file exists" || mv $f $1
+
+cmd yes_preview &{{
+    lf -remote "send $id map , no_preview"
+    lf -remote "send $id set ratios 2:4:6"
+    lf -remote "send $id set preview"
+}}
+
+cmd no_preview &{{
+    lf -remote "send $id map , yes_preview"
+    lf -remote "send $id set ratios 2:10"
+    lf -remote "send $id set nopreview"
+    ~/.config/lf/cleaner
+}}
+
+cmd md ${{mkdir $1}}
+
+cmd mf ${{
+    set -f
+    mkdir -- $1
+    mv -- $fx $1
+}}
+
+cmd vim ${{$EDITOR $1}}
+
+cmd touch ${{touch $1}}
+
+cmd bulkrename ${{
+    old="$(mktemp)"
+    new="$(mktemp)"
+    if [ -n "$fs" ]; then
+        fs="$(basename -a $fs)"
+    else
+        fs="$(ls)"
+    fi
+    printf '%s\n' "$fs" >"$old"
+    printf '%s\n' "$fs" >"$new"
+    $EDITOR "$new"
+    [ "$(wc -l < "$new")" -ne "$(wc -l < "$old")" ] && exit
+    paste "$old" "$new" | while IFS= read -r names; do
+        src="$(printf '%s' "$names" | cut -f1)"
+        dst="$(printf '%s' "$names" | cut -f2)"
+        if [ "$src" = "$dst" ] || [ -e "$dst" ]; then
+            continue
+        fi
+        mv -- "$src" "$dst"
+    done
+    rm -- "$old" "$new"
+    lf -remote "send $id unselect"
+}}
+
+cmd open-with %"$@" "$fx"
+
+cmd paste-override &{{
+    set -f
+    load=$(lf -remote "load")
+    mode=$(echo "$load" | head -1)
+    list=$(echo "$load" | sed '1d')
+    set -- _ $list; shift
+    [ $# -gt 0 ] || exit
+    case $mode in
+        copy)
+            rsync -r "$@" ./
+            ;;
+        move)
+            rsync -r --remove-source-files "$@" ./
+            ;;
+    esac
+    lf -remote 'save\nmove\n'
+    lf -remote "send $id load"
+    lf -remote "send $id echo \"\033[0;32mpasted $# file(s)\033[0m\""
+}}

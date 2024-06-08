@@ -1,0 +1,11 @@
+configuration {
+  display-drun: "Applications:";
+  display-window: "Windows:";
+  drun-display-format: "{icon} {name}";
+  font: "JetBrainsMono NF 12";
+  modi: "window,drun,run,ssh,calc,clipboard:greenclip print";
+  show-icons: false;
+  terminal: "alacritty";
+}
+
+@theme "/themes/dark.rasi"
