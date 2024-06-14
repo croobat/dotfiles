@@ -73,8 +73,9 @@ alias lf="lfrun"
 alias mermaid="mmdc --theme forest"
 alias gs="echo 'te confundiste carnal'"
 alias sudoedit="doas vim"
+alias neofetch="fastfetch"
 
-#Abbreviated
+# Abbreviated
 alias cpr="cp -r"
 alias t="trash"
 alias firefoxserver="live-server --browser=firefox-developer-edition"

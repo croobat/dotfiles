@@ -97,6 +97,7 @@ M.init = function()
 				name = {
 					"Event Tester", -- xev
 					"Emulator", -- android studio emulator
+          "Device Manager", -- android studio device manager
 				},
 				role = {
 					"AlarmWindow", -- Thunderbird's calendar

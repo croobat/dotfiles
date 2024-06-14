@@ -12,8 +12,8 @@ DMENU_WIDTH=1366
 DMENU_NUMBER_LINES=20
 DMENU_BROWSER_WIDTH=360
 BROWSERS=(
-	"firefox"
 	"qutebrowser"
+	"firefox"
 	"firefox-developer-edition"
 	"google-chrome-stable"
 	"google-chrome-unstable"

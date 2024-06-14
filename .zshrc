@@ -35,13 +35,8 @@ export LESS='-R -j8 -x4'
 export EXA_COLORS="ur=3;33;40m:uw=3;33;40m:ux=3;33;40m:ue=3;33;40m:gr=3;34;40m:gw=3;34;40m:gx=3;34;40m:tr=3;36;40m:tw=3;36;40m:tx=3;36;40m"
 export LF_COLORS="*.epub=01;35:*.mobi=01;34:*.lua=01;36:*.json=01;32"
 
-zstyle :omz:plugins:ssh-agent agent-forwarding yes
-zstyle :omz:plugins:ssh-agent helper ksshaskpass
-zstyle :omz:plugins:ssh-agent identities id_rsa id_ed25519_saeko id_ed25519_lion
-zstyle ':omz:update' mode auto
-zstyle ':omz:update' frequency 7
-
 export plugins=(
+  nvm
   adb
   aliases
   archlinux
@@ -67,6 +62,7 @@ export plugins=(
   pj
   react-native
   safe-paste
+	ssh-agent
   sudo
   systemd
   yarn
@@ -79,8 +75,21 @@ export plugins=(
 
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 
+zstyle ':omz:update' mode auto
+zstyle ':omz:update' frequency 7
+zstyle ':omz:plugins:ssh-agent' agent-forwarding yes
+zstyle ':omz:plugins:ssh-agent' helper ksshaskpass
+zstyle ':omz:plugins:ssh-agent' identities id_rsa id_ed25519_saeko id_ed25519_broxia
+zstyle ':omz:plugins:ssh-agent' quiet yes
+zstyle ':omz:plugins:ssh-agent' lifetime 4h
+zstyle ':omz:plugins:nvm' lazy yes
+zstyle ':omz:plugins:nvm' autoload yes
+# zstyle ':omz:plugins:nvm' silent-autoload yes
+
+
 source "$ZSH/oh-my-zsh.sh"
 source "$HOME/.zsh_aliases"
+# source "/usr/share/nvm/init-nvm.sh"
 
 #    ╭───────────╮
 #    │ Functions │
