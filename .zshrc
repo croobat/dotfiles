@@ -12,6 +12,7 @@ export ZSH="$HOME/.oh-my-zsh"
 export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
 
 # (xiong-chamiov-plus mod)
+# shellcheck disable=SC1083
 export PROMPT=$'%{\e[0;34m%}%B┌─[%b%{\e[0m%}%{\e[1;32m%}%n%{\e[1;30m%}@%{\e[0m%}%{\e[0;36m%}%m%{\e[0;34m%}%B]%b%{\e[0m%} - %b%{\e[0;34m%}%B[%b%{\e[1;37m%}%5~%{\e[0;34m%}%B]%b%{\e[0m%} - %{\e[0;34m%}%B[%b%{\e[0;33m%}'%D{"%H:%M"}%b$'%{\e[0;34m%}%B]%b%{\e[0m%}
 %{\e[0;34m%}%B└─%B[%{\e[1;35m%}$%{\e[0;34m%}%B] <$(git_prompt_info)>%{\e[0m%}%b '
 PS2=$' \e[0;34m%}%B>%{\e[0m%}%b '
@@ -60,7 +61,6 @@ export plugins=(
   npm
   pip
   pj
-  react-native
   safe-paste
 	ssh-agent
   sudo
@@ -87,6 +87,7 @@ zstyle ':omz:plugins:nvm' autoload yes
 # zstyle ':omz:plugins:nvm' silent-autoload yes
 
 
+# shellcheck disable=SC1091
 source "$ZSH/oh-my-zsh.sh"
 source "$HOME/.zsh_aliases"
 # source "/usr/share/nvm/init-nvm.sh"
@@ -161,16 +162,17 @@ dcupdf() {
   docker compose -f "$1" up -d
 }
 
-if [[ -d "/home/tony/intelephense" ]]; then
-  trash /home/tony/intelephense
-fi
-[[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
+# if [[ -d "/home/tony/intelephense" ]]; then
+#   trash /home/tony/intelephense
+# fi
+# [[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
 
 
 # garbage {{{
 # Empty line after each command
 precmd() {
   precmd() {
+		# shellcheck disable=SC2317
     echo
   }
 }
@@ -186,6 +188,10 @@ esac
 PATH="/home/tony/perl5/bin${PATH:+:${PATH}}"; export PATH;
 PERL5LIB="/home/tony/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
 PERL_LOCAL_LIB_ROOT="/home/tony/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
-PERL_MB_OPT="--install_base \"/home/tony/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=/home/tony/perl5"; export PERL_MM_OPT;
+# shellcheck disable=SC2089
+PERL_MB_OPT="--install_base \"/home/tony/perl5\"";
+# shellcheck disable=SC2090
+export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/home/tony/perl5";
+export PERL_MM_OPT;
 #}}}

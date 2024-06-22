@@ -25,6 +25,7 @@ export GOPATH=/home/tony/.go
 
 # android-studio
 export _JAVA_AWT_WM_NONREPARENTING=1
+export ANDROID_HOME=/home/tony/Android/Sdk
 
 # theme
 export QT_QPA_PLATFORMTHEME=qt5ct
