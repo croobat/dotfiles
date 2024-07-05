@@ -8,6 +8,9 @@ xset r rate 250 40
 xset s 1800
 # enable touchpad tapping
 xinput set-prop 10 'libinput Tapping Enabled' 1
+# invert scrolling
+xinput set-prop 10 'libinput Natural Scrolling Enabled' 1
+
 
 # dpi
 [[ -f ~/.Xresources ]] && xrdb -merge -I "$HOME" ~/.Xresources
