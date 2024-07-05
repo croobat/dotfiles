@@ -345,6 +345,8 @@ M.init = function()
 		-- 7 - dmenu keys
 		awful.key({ modkey }, "r", function() awful.spawn("j4-dmenu-desktop") end,
 			{ description = "Desktop applications", group = "7 - dmenu/rofi" }),
+		awful.key({ modkey }, "space", function() awful.spawn("j4-dmenu-desktop") end,
+			{ description = "Desktop applications", group = "7 - dmenu/rofi" }),
 		awful.key({ modkey, "Shift" }, "c",
 			function() awful.spawn("rofi -show calc -modi calc -no-show-match -no-sort") end,
 			{ description = "Calculator", group = "7 - dmenu/rofi" }),

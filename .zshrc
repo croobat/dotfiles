@@ -25,9 +25,9 @@ export BC_ENV_ARGS=~/.config/bc/bcrc
 export FZF_DEFAULT_COMMAND='fd'
 
 export PROJECT_PATHS=(
-  ~/Development/work/saeko
-  ~/Development/work/broxia
-  ~/Development/mobile-dev
+	~/Development/work/saeko
+	~/Development/work/broxia
+	~/Development/mobile-dev
 )
 
 export MANPAGER='nvim +Man!'
@@ -37,40 +37,40 @@ export EXA_COLORS="ur=3;33;40m:uw=3;33;40m:ux=3;33;40m:ue=3;33;40m:gr=3;34;40m:g
 export LF_COLORS="*.epub=01;35:*.mobi=01;34:*.lua=01;36:*.json=01;32"
 
 export plugins=(
-  nvm
-  adb
-  aliases
-  archlinux
-  bun
-  colored-man-pages
-  common-aliases
-  composer
-  dirhistory
-  docker
-  docker-compose
-  extract
-  gh
-  git
-  gitignore
-  history
-  git-flow
-  isodate
-  jira
-  jsontools
-  laravel
-  npm
-  pip
-  pj
-  safe-paste
+	nvm
+	adb
+	aliases
+	archlinux
+	bun
+	colored-man-pages
+	common-aliases
+	composer
+	dirhistory
+	docker
+	docker-compose
+	extract
+	gh
+	git
+	gitignore
+	history
+	git-flow
+	isodate
+	jira
+	jsontools
+	laravel
+	npm
+	pip
+	pj
+	safe-paste
 	ssh-agent
-  sudo
-  systemd
-  yarn
-  zsh-completions
-  zsh-autosuggestions
-  zsh-history-substring-search
-  you-should-use
-  zsh-syntax-highlighting
+	sudo
+	systemd
+	yarn
+	zsh-completions
+	zsh-autosuggestions
+	zsh-history-substring-search
+	you-should-use
+	zsh-syntax-highlighting
 )
 
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
@@ -86,7 +86,6 @@ zstyle ':omz:plugins:nvm' lazy yes
 zstyle ':omz:plugins:nvm' autoload yes
 # zstyle ':omz:plugins:nvm' silent-autoload yes
 
-
 # shellcheck disable=SC1091
 source "$ZSH/oh-my-zsh.sh"
 source "$HOME/.zsh_aliases"
@@ -97,69 +96,69 @@ source "$HOME/.zsh_aliases"
 #    ╰───────────╯
 # Less pipes
 tip() {
-  curl "https://cheat.sh/$1" | less
+	curl "https://cheat.sh/$1" | less
 }
 
 pi() {
-  if [[ "$1" == "" ]]; then
-    ping -c 3 gnu.org
-  else
-    ping -c 3 "$1"
-  fi
+	if [[ "$1" == "" ]]; then
+		ping -c 3 gnu.org
+	else
+		ping -c 3 "$1"
+	fi
 }
 
 webjpeg() {
-  if [ "$#" -lt 2 ]; then
-    echo "Usage: webjpeg input_file output_file [resize_option]"
-    return 1
-  fi
+	if [ "$#" -lt 2 ]; then
+		echo "Usage: webjpeg input_file output_file [resize_option]"
+		return 1
+	fi
 
-  input_file="$1"
-  output_file="$2"
-  resize_option="$3"
+	input_file="$1"
+	output_file="$2"
+	resize_option="$3"
 
-  if [ -n "$resize_option" ]; then
-    convert "$input_file" -resize "$resize_option" -sampling-factor 4:2:0 -strip -quality 80 -strip -interlace JPEG -colorspace sRGB "$output_file"
-  else
-    convert "$input_file" -sampling-factor 4:2:0 -strip -quality 80 -interlace JPEG -strip -colorspace sRGB "$output_file"
-  fi
+	if [ -n "$resize_option" ]; then
+		convert "$input_file" -resize "$resize_option" -sampling-factor 4:2:0 -strip -quality 80 -strip -interlace JPEG -colorspace sRGB "$output_file"
+	else
+		convert "$input_file" -sampling-factor 4:2:0 -strip -quality 80 -interlace JPEG -strip -colorspace sRGB "$output_file"
+	fi
 }
 
 webpng() {
-  if [ "$#" -lt 2 ]; then
-    echo "Usage: webpng input_file output_file [resize_option]"
-    return 1
-  fi
+	if [ "$#" -lt 2 ]; then
+		echo "Usage: webpng input_file output_file [resize_option]"
+		return 1
+	fi
 
-  input_file="$1"
-  output_file="$2"
-  resize_option="$3"
+	input_file="$1"
+	output_file="$2"
+	resize_option="$3"
 
-  if [ -n "$resize_option" ]; then
-    convert "$input_file" -resize "$resize_option" -strip -quality 80 -strip "$output_file"
-  else
-    convert "$input_file" -strip -quality 80 -strip "$output_file"
-  fi
+	if [ -n "$resize_option" ]; then
+		convert "$input_file" -resize "$resize_option" -strip -quality 80 -strip "$output_file"
+	else
+		convert "$input_file" -strip -quality 80 -strip "$output_file"
+	fi
 }
 
 websvg() {
-  svgo "$1" -o "$2"
+	svgo "$1" -o "$2"
 }
 
 webjpegbatch() {
-  mogrify -sampling-factor 4:2:0 -strip -quality 80 -interlace JPEG -colorspace sRGB -path "$1" ./*.jpg
+	mogrify -sampling-factor 4:2:0 -strip -quality 80 -interlace JPEG -colorspace sRGB -path "$1" ./*.jpg
 }
 
 webpngbatch() {
-  mogrify -sampling-factor 4:2:0 -strip -quality 80 -interlace JPEG -colorspace sRGB -path "$1" ./*.png
+	mogrify -sampling-factor 4:2:0 -strip -quality 80 -interlace JPEG -colorspace sRGB -path "$1" ./*.png
 }
 
 what-command() {
-  pacman -Qlq "$1" | grep /usr/bin/
+	pacman -Qlq "$1" | grep /usr/bin/
 }
 
 dcupdf() {
-  docker compose -f "$1" up -d
+	docker compose -f "$1" up -d
 }
 
 # if [[ -d "/home/tony/intelephense" ]]; then
@@ -167,31 +166,49 @@ dcupdf() {
 # fi
 # [[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
 
+root() {
+	# List of common app and index root files, ordered by priority
+	local files=("App.js" "App.ts" "App.tsx" "app.js" "app.ts" "app.tsx" "index.html" "index.js" "index.py" "index.php" "init.lua")
+
+	# Loop through the list and open the first file that exists
+	for file in "${files[@]}"; do
+		if [[ -f $file ]]; then
+			vim "$file"
+			return
+		fi
+	done
+
+	# If no common files are found, print a message
+	echo "No common index files found."
+}
 
 # garbage {{{
 # Empty line after each command
 precmd() {
-  precmd() {
+	precmd() {
 		# shellcheck disable=SC2317
-    echo
-  }
+		echo
+	}
 }
 
 # pnpm
 export PNPM_HOME="/home/tony/.local/share/pnpm"
 case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
+*":$PNPM_HOME:"*) ;;
+*) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
 
-PATH="/home/tony/perl5/bin${PATH:+:${PATH}}"; export PATH;
-PERL5LIB="/home/tony/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
-PERL_LOCAL_LIB_ROOT="/home/tony/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PATH="/home/tony/perl5/bin${PATH:+:${PATH}}"
+export PATH
+PERL5LIB="/home/tony/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"
+export PERL5LIB
+PERL_LOCAL_LIB_ROOT="/home/tony/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"
+export PERL_LOCAL_LIB_ROOT
 # shellcheck disable=SC2089
-PERL_MB_OPT="--install_base \"/home/tony/perl5\"";
+PERL_MB_OPT="--install_base \"/home/tony/perl5\""
 # shellcheck disable=SC2090
-export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=/home/tony/perl5";
-export PERL_MM_OPT;
+export PERL_MB_OPT
+PERL_MM_OPT="INSTALL_BASE=/home/tony/perl5"
+export PERL_MM_OPT
 #}}}
